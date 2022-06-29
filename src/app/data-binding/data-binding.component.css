@@ -2,3 +2,15 @@
   background-color: red;
   font-weight: bold;
 }
+
+.property-binding{
+  padding: 10px;
+}
+
+button{
+  margin-top: 10px;
+}
+
+.two-way-binding, input{
+  margin: 5px;
+}
