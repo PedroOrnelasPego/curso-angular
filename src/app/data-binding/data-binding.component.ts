@@ -12,6 +12,12 @@ export class DataBindingComponent implements OnInit {
 
   cursoAngular: boolean = true
 
+  valorAtual: string = ''
+
+  valorSalvo: string = ''
+
+  isMouseOver: boolean = false
+
   getValor(){
     return 1;
   }
@@ -19,6 +25,25 @@ export class DataBindingComponent implements OnInit {
   getCurtiCurso() {
     return true;
   }
+
+  botaoClicado(){
+    alert('Botão Clicado!')
+  }
+
+  digitou(evento: KeyboardEvent){
+    this.valorAtual = ((<HTMLInputElement>evento.target).value)
+
+  }
+
+  salvarValor(valor: any){
+    this.valorSalvo = ((<HTMLInputElement>valor.target).value)
+
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
+  }
+
 
   constructor() { }
 

@@ -14,7 +14,8 @@
     <img [src]= "urlImagem" >
   </article> -->
 
-  <article>
+
+  <!--<article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
@@ -37,6 +38,35 @@
       <div class="alert" role="alert" [class.alert-info]="variavelLocal.value == 'alert-info'">Info</div>
 
       <div class="alert alert-danger" role="alert" [style.display]="variavelLocal.value == 'alert-danger' ?'block' : 'none'">Esse texto só aparece em caso de erro</div>
+    </div>
+  </article>-->
+
+
+  <article>
+    <h3>Event Binding</h3>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank" style="text-decoration: none; color: rgba(255, 0, 0, 0.527);">Lista de Eventos</a>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-dark">Me clique!</button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="digitou($event)"
+      (keyup.enter)="salvarValor($event)"
+      (blur)="salvarValor($event)"#campoInput>
+
+
+      <p>Valor Atual do Input: {{ valorAtual }}</p>
+      <p>Valor Atual do Input: {{ valorSalvo }}</p>
+
+      <br><br>
+
+      <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver"
+      >Passe o mouse sobre mim</span>
+
     </div>
   </article>
 
