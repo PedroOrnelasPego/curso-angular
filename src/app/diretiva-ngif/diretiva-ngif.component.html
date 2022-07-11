@@ -1,0 +1,22 @@
+<h5>Diretiva *ngIf</h5>
+
+<div *ngIf="cursos.length > 0">
+  Lista de curso aqui: {{ cursos }}
+</div>
+
+<div *ngIf="cursos.length === 0">
+  Não existe cursos para serem listados
+</div>
+
+<br> <br>
+
+<div *ngIf="mostrarCursos">
+  Lista de curso aqui: {{ cursos }}
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não existe cursos para serem listados
+</div>
+
+<br>
+<button (click)="onMostrarCursos()">CHANGE</button>
